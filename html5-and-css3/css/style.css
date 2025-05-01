@@ -1,0 +1,15 @@
+body{
+    background-color: aqua;
+    color: black;
+}
+#p1,#p4{
+    color: blue;
+}
+
+#p2{
+    color: green !important;
+}
+
+#p3{
+  color: coral;
+}
