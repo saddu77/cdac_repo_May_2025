@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <script>
+    class BankAccount{
+        constructor(accNum,accHolderName,balance){
+            this._accNum = accNum;
+            this._accHolderName  = accHolderName;
+            this._balance = balance;
+        }
+
+        showAccountDetails(){
+            console.log("Account Number is: " + this._accNum);
+            console.log("Account Holder is: " + this._accHolderName);
+            console.log("Balance is: " + this._balance);            
+        }
+
+        deposit(amount){
+            this._balance += amount;
+            this.showAccountDetails()
+        }
+
+        withdraw(amount){
+            if(this._balance >= amount){
+                this._balance -= amount;
+                this.showAccountDetails();
+            }else {
+                console.log("Insifficent Balance");
+                
+            }
+        }        
+    }
+    let myBankAcc = new BankAccount("9898989087654","John",10000);
+    myBankAcc.deposit(500);
+ </script>
+<body>
+    <h2>Encapsulation Demo</h2>
+</body>
+</html>
